@@ -5,8 +5,8 @@
 #  Если не передан хотя бы один из параметров,
 #  то должен вернуться пустой массив.
 
-def coincidence(array = [], range = (1..3))
-  return array if array.empty?
+def coincidence(array = [], range = 0)
+  return array if array.empty? || range.zero?
 
   tmp = []
 
