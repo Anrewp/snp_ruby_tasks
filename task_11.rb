@@ -18,7 +18,7 @@ class Dessert
   end
 
   def delicious?
-    is_a?(Dessert) ? true : false
+    is_a?(Dessert)
   end
 end
 
