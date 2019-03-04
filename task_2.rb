@@ -8,12 +8,7 @@
 def coincidence(array = [], range = 0)
   return [] if array.empty? || range == 0
 
-  tmp = []
-
-  array.each do |elem|
-    num = elem.to_i
-    tmp.push(elem) if num >= range.first && num <= range.last
-  end
+  tmp = array.select { |num| range.include?(num) }
 
   tmp
 end
