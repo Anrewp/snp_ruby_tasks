@@ -9,9 +9,8 @@ def palindrome?(string)
   return false if string.nil?
 
   str = string.to_s.downcase.scan(/\w/)
-  return true if str == str.reverse
+  return str == str.reverse
 
-  false
 end
 
 # TESTS
