@@ -7,12 +7,14 @@
 require 'active_support/time'
 
 def date_in_future2(integer = 0)
-  str = DateTime.now.strftime('%d-%m-%Y %H:%M:%S')
-  return str unless integer.is_a?(Integer)
-
   time = DateTime.now
-  time += integer.days
-  time.strftime('%d-%m-%Y %H:%M:%S')
+
+  if integer.is_a?(Integer)
+    return (time + integer.days).strftime('%d-%m-%Y %H:%M:%S')
+  else
+    return time.strftime('%d-%m-%Y %H:%M:%S')
+  end
+
 end
 
 # TESTS
