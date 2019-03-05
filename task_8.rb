@@ -7,10 +7,7 @@ def multiply_numbers(inputs = 0)
   nums = inputs.to_s.scan(/[1-9]/)
   return nil if nums.empty?
 
-  mult_result = 1
-  nums.each { |num|  mult_result *= num.to_i }
-
-  mult_result
+  nums.map!(&:to_i).inject(:*)
 end
 
 # TESTS
