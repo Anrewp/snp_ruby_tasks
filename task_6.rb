@@ -34,11 +34,7 @@ def rps_game_winner(players)
     players[0].join(' ')
   else players[1].join(' ')
   end
-
-  rescue WrongNumberOfPlayersError
-    'WrongNumberOfPlayersError'
-  rescue NoSuchStrategyError
-    'NoSuchStrategyError'
+ 
 end
 
 # TESTS
