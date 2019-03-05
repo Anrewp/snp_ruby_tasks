@@ -8,9 +8,8 @@
 def coincidence(array = [], range = 0)
   return [] if array.empty? || range == 0
 
-  tmp = array.select { |num| range.include?(num) }
-
-  tmp
+  array.select { |num| range.include?(num) }
+  
 end
 
 # TESTS
