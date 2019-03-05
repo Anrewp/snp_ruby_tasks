@@ -5,7 +5,7 @@
 #  Если не передан хотя бы один из параметров,
 #  то должен вернуться пустой массив.
 
-def coincidence(array = [], range = (0..0))
+def coincidence(array = [], range = (0...0))
   
   array.select { |num| range.include?(num) }
 
