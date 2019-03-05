@@ -2,19 +2,13 @@
 # который вернет произведение цифр,
 # входящих в inputs.
 
-def multiply_numbers(inputs = nil)
-  return nil if inputs.nil?
+def multiply_numbers(inputs = 0)
 
   nums = inputs.to_s.scan(/[1-9]/)
   return nil if nums.empty?
 
-  mult_result = 0
-  nums.each do |num|
-    if mult_result.zero?
-      mult_result = num.to_i
-    else mult_result *= num.to_i
-    end
-  end
+  mult_result = 1
+  nums.each { |num|  mult_result *= num.to_i }
 
   mult_result
 end
