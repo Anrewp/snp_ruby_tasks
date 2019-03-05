@@ -6,8 +6,7 @@
 #  то должен вернуться пустой массив.
 
 def coincidence(array = [], range = (0..0))
-  return [] if array.empty? || range.size == 0
-
+  
   array.select { |num| range.include?(num) }
 
 end
