@@ -4,17 +4,7 @@
 # регистр букв не имеет значения при определении анаграмм.
 
 def combine_anagrams(words_array)
-  str = words_array.join(' ')
-  str.downcase!
-
-  tmp = []
-  words_array.each do |word|
-    unless tmp.join(' ') =~ /[#{word}]{#{word.length}}/
-      tmp.push(str.scan(/[#{word}]{#{word.length}}/))
-    end
-  end
-
-  tmp
+ words_array.group_by { |elem| elem.downcase.chars.sort }.values
 end
 
 # TESTS
