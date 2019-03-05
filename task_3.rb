@@ -7,7 +7,7 @@ def max_odd(array)
   tmp = []
 
   array.each do |elem|
-    tmp.push(elem.to_i) if elem.is_a?(Numeric) && elem.to_i.odd?
+    tmp.push(elem) if elem.is_a?(Numeric) && elem.to_i == elem && elem.to_i.odd?
   end
 
   return nil if tmp.empty?
@@ -23,7 +23,7 @@ end
 # else puts "   FALSE 1"
 # end
 # #2
-# if max_odd([21.0, 23.3, 25.5, 25.9, 2, 3, 4, 4]) == 25
+# if max_odd([21.0, 23.3, 25.5, 27.9, 2, 3, 4, 4]) == 21
 #   puts "true"
 # else puts "   FALSE 2"
 # end
