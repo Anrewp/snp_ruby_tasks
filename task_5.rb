@@ -6,7 +6,7 @@
 # '01-01-2001 22:33:44’.
 require 'active_support/time'
 
-def date_in_future2(integer = 0)
+def date_in_future2(integer)
   time = DateTime.now
 
   if integer.is_a?(Integer)
