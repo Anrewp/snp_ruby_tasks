@@ -7,17 +7,11 @@ def count_words(string)
   arr_words = string.downcase.scan(/\w+/)
 
   arr_words.each do |word|
-    next if result_hash.member?(word)
-
-    i = 0
-    count = 0
-
-    while i <= arr_words.length
-      count += 1 if arr_words[i].eql?(word)
-      i += 1
+    if result_hash.has_key?(word)
+      result_hash[word] += 1
+    else
+      result_hash[word]  = 1
     end
-
-    result_hash[word] = count
   end
 
   result_hash
