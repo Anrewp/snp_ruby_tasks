@@ -11,14 +11,12 @@
 # ключей в порядке возрастания.
 
 def connect_hashes(hash1, hash2)
-  new_hash = if hash2.values.sum > hash1.values.sum ||
+  new_hash = if hash2.values.sum >  hash1.values.sum ||
                 hash2.values.sum == hash1.values.sum
-               hash1.merge(hash2) { |_, _, v2| v2 }
-             else hash1.merge(hash2) { |_, v1, _| v1 }
+                hash1.merge(hash2)   { |_key, _v1, v2| v2 }
+             else hash1.merge(hash2) { |_key, v1, _v2| v1 }
              end
-  new_hash.reject! { |_, v| v < 10 }
-  new_hash = new_hash.to_a.sort.reverse.to_h
-  new_hash
+  new_hash.reject { |_, v| v < 10 }.sort_by { |_, v| v }.to_h
 end
 
 # TESTS
