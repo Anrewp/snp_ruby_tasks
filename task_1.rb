@@ -6,11 +6,8 @@
 # пробелов, знаков препинания и регистра.
 
 def palindrome?(string)
-  return false if string.nil?
-
-  str = string.to_s.downcase.scan(/\w/)
+  str =  string.to_s.downcase.scan(/\w/)
   str == str.reverse
-
 end
 
 # TESTS
