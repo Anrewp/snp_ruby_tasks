@@ -7,7 +7,7 @@ def multiply_numbers(inputs = 0)
   nums = inputs.to_s.scan(/[1-9]/)
   return nil if nums.empty?
 
-  nums.map!(&:to_i).inject(:*)
+  nums.map(&:to_i).inject(:*)
 end
 
 # TESTS
