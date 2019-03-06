@@ -3,12 +3,9 @@
 
 module Palindrome
 
-  def palindrome?
-    return false if nil?
-
-    str = downcase.scan(/\w/)
+  def palindrome?(string)
+    str =  string.to_s.downcase.scan(/\w/)
     str == str.reverse
-
   end
 end
 
