@@ -3,18 +3,9 @@
 # употребления входящих в неё слов.
 
 def count_words(string)
-  result_hash = {}
   arr_words = string.downcase.scan(/\w+/)
 
-  arr_words.each do |word|
-    if result_hash.has_key?(word)
-      result_hash[word] += 1
-    else
-      result_hash[word]  = 1
-    end
-  end
-
-  result_hash
+  arr_words.inject(Hash.new(0)) { |hash, word| hash[word] += 1; hash }
 end
 
 # TESTS
