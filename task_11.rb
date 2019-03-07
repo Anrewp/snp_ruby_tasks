@@ -9,12 +9,12 @@ class Dessert
   attr_accessor :name, :calories
 
   def initialize(name, calories)
-    @name = name
-    @calories = calories
+    self.name     = name
+    self.calories = calories
   end
 
   def healthy?
-    @calories < 200
+    calories < 200
   end
 
   def delicious?
