@@ -3,8 +3,8 @@
 
 module Palindrome
 
-  def palindrome?(string)
-    str =  string.to_s.downcase.scan(/\w/)
+  def palindrome?
+    str = downcase.scan(/\w/)
     str == str.reverse
   end
 end
