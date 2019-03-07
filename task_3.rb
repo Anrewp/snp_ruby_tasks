@@ -4,15 +4,13 @@
 # Вернуть nil,если таких элементов нет в переданном массиве.
 
 def max_odd(array)
-  tmp = []
 
-  array.each do |elem|
-    tmp.push(elem) if elem.is_a?(Numeric) && elem.to_i == elem && elem.to_i.odd?
+  array.select do |elem|
+    elem if elem.is_a?(Numeric) &&
+            elem.to_i == elem && elem.to_i.odd?
   end
-
-  return nil if tmp.empty?
-
-  tmp.max
+  
+  .max
 end
 
 # TESTS
